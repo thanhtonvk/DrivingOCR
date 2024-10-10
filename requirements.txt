@@ -1,0 +1,8 @@
+scipy
+bidi
+scikit-image
+bidi
+# Pillow==9.0.0
+transformers
+fuzzywuzzy
+unidecode

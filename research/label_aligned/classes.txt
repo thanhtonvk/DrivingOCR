@@ -1,0 +1,15 @@
+cong_an_tinh_vi
+cong_an_tinh_en
+cong_an_huyen_vi
+cong_an_huyen_en
+so
+ten_chu_xe
+dia_chi
+nhan_hieu
+so_loai
+so_may
+so_khung
+mau_son
+bien_so
+qr
+dung_tich
