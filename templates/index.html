@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Multiple Images</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Upload chữ ký</h1>
+      <!-- Form upload -->
+      <form method="POST" enctype="multipart/form-data" class="mb-4">
+        <div class="mb-3">
+          <input
+            type="file"
+            name="file"
+            multiple
+            class="form-control"
+            id="formFileMultiple"
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Upload</button>
+        </div>
+      </form>
+
+      <!-- Hiển thị hình ảnh đã tải lên -->
+      {% if data %}
+      <h2 class="text-center mb-4">Uploaded Images:</h2>
+      <div class="row">
+        {% for item in data %}
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img
+              src="{{ url_for('static', filename='uploads/' + item['path']) }}"
+              class="card-img-top"
+              alt="{{ item['path'] }}"
+            />
+            <div class="card-body">
+              <p class="card-text text-center">{{ item['result'] }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <!-- Bootstrap JS (optional for interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
