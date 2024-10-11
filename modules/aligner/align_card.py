@@ -16,7 +16,7 @@ class AlignCard():
     )
     def predict(self,image:np.ndarray):
         result = self.model(image)
-        if result.doc_polygon:
+        if result.doc_polygon.any():
             rflat_img = result.gen_doc_flat_img(image_size=(539, 856))
             return rflat_img
         return None

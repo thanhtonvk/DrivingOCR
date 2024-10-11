@@ -6,3 +6,4 @@ bidi
 transformers
 fuzzywuzzy
 unidecode
+ultralytics
