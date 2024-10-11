@@ -1,5 +1,5 @@
 scipy
-bidi
+python-bidi
 scikit-image
 bidi
 transformers
