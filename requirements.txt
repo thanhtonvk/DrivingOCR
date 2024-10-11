@@ -2,8 +2,11 @@ scipy
 bidi
 scikit-image
 bidi
-# Pillow==9.0.0
 transformers
 fuzzywuzzy
 unidecode
 ultralytics
+numpy==1.24.4
+opencv-python==4.10.0.84
+torch
+torchvision
